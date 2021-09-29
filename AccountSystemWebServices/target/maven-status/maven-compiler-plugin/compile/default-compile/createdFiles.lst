@@ -1,0 +1,3 @@
+com\lelo\services\config\webconfig.class
+com\lelo\services\MainRestApplication.class
+com\lelo\services\config\ConfigurationSwagger.class
