@@ -1,0 +1,11 @@
+com\lelo\translator\GoalsTranslator.class
+com\lelo\translator\RewardsTranslator.class
+com\lelo\translator\Implementation\PersonTransImpl.class
+com\lelo\translator\Implementation\GoalsTransImpl.class
+com\lelo\translator\Implementation\RewardsTransImpl.class
+com\lelo\translator\PersonTranslator.class
+com\lelo\translator\Implementation\AccountTypeTransImpl.class
+com\lelo\translator\AccountTypeTranslator.class
+com\lelo\translator\TransactionsTranslator.class
+com\lelo\translator\Configuration\ConfigurationTranslator.class
+com\lelo\translator\Implementation\TransactionsTransImpl.class

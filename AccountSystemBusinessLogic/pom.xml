@@ -14,5 +14,19 @@
     <artifactId>AccountSystemBusinessLogic</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.example.Account-system</groupId>
+            <artifactId>AccountSystemTranslator</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.example.Account-system</groupId>
+            <artifactId>AccountSystemWebDomain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     
 </project>
