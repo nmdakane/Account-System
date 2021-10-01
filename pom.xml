@@ -7,7 +7,11 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
         <version>2.1.12.RELEASE</version>
+=======
+        <version>2.5.1</version>
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -70,12 +74,15 @@
                </exclusions>
            </dependency>
 
+<<<<<<< HEAD
            <dependency>
                <groupId>mysql</groupId>
                <artifactId>mysql-connector-java</artifactId>
                <version>8.0.17</version>
            </dependency>
 
+=======
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
 
        </dependencies>
    </dependencyManagement>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com\lelo\services\controllers\GoalsController.class
 com\lelo\services\config\webconfig.class
 com\lelo\services\controllers\PersonController.class
@@ -6,3 +7,8 @@ com\lelo\services\controllers\TransactionsController.class
 com\lelo\services\config\ConfigurationSwagger.class
 com\lelo\services\controllers\RewardsController.class
 com\lelo\services\controllers\AccountTypeController.class
+=======
+com\lelo\services\config\webconfig.class
+com\lelo\services\MainRestApplication.class
+com\lelo\services\config\ConfigurationSwagger.class
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c

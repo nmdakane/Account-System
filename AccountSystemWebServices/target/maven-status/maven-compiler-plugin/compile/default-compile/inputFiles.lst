@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\controllers\PersonController.java
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\MainRestApplication.java
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\controllers\RewardsController.java
@@ -6,3 +7,8 @@ C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\m
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\config\webconfig.java
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\controllers\GoalsController.java
 C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\config\ConfigurationSwagger.java
+=======
+C:\Users\masag\Desktop\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\config\webconfig.java
+C:\Users\masag\Desktop\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\config\ConfigurationSwagger.java
+C:\Users\masag\Desktop\Account System\AccountSystemWebServices\src\main\java\com\lelo\services\MainRestApplication.java
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c

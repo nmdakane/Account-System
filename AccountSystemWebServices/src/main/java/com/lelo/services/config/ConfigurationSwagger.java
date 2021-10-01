@@ -13,7 +13,10 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+<<<<<<< HEAD
 //import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
+=======
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
 
 import java.util.Collections;
 
@@ -46,7 +49,11 @@ public class ConfigurationSwagger {
                 applicationDescription,
                 applicationVersion,
                 "",
+<<<<<<< HEAD
                 new Contact("Your Name or Team Name", "", "lelo"),
+=======
+                new Contact("Your Name or Team Name", "", "email address"),
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
                 "",
                 "",
                 Collections.emptyList());

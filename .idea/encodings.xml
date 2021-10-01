@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/AccountSystemBusinessLogic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AccountSystemBusinessLogic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AccountSystemRepository/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AccountSystemRepository/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AccountSystemTranslator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AccountSystemWebDomain/src/main/java" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/AccountSystemRepository/src/main/java" charset="UTF-8" />
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
     <file url="file://$PROJECT_DIR$/AccountSystemWebServices/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />

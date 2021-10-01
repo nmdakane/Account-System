@@ -35,12 +35,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+<<<<<<< HEAD
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+=======
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
     </dependencies>
     
 </project>
