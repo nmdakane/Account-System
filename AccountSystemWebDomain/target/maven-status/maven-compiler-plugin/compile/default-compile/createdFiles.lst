@@ -1,0 +1,10 @@
+com\lelo\webdomain\dtos\RewardsDTO.class
+com\lelo\webdomain\dtos\GoalsDTO.class
+com\lelo\webdomain\dtos\AccountTypeDTO.class
+com\lelo\webdomain\persistence\Goals.class
+com\lelo\webdomain\persistence\AccountType.class
+com\lelo\webdomain\persistence\Person.class
+com\lelo\webdomain\persistence\Rewards.class
+com\lelo\webdomain\dtos\PersonDTO.class
+com\lelo\webdomain\persistence\PersonTransactions.class
+com\lelo\webdomain\dtos\TransactionsDTO.class

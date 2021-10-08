@@ -9,14 +9,13 @@
         <module name="AccountSystemTranslator" />
         <module name="AccountSystemWebServices" />
         <module name="AccountSystemWebDomain" />
-        <module name="AccountSystemBusinessLogic" />
         <module name="AccountSystemRepository" />
+        <module name="AccountSystemBusinessLogic" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Account System" options="-parameters" />
       <module name="AccountSystemBusinessLogic" options="-parameters" />
       <module name="AccountSystemRepository" options="-parameters" />
       <module name="AccountSystemTranslator" options="-parameters" />

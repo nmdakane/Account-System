@@ -1,0 +1,6 @@
+com\lelo\repo\files\AccountTypeRepository.class
+com\lelo\repo\configuration\ConfigurationRepository.class
+com\lelo\repo\files\RewardsRepository.class
+com\lelo\repo\files\GoalsRepository.class
+com\lelo\repo\files\PersonRepository.class
+com\lelo\repo\files\TransactionsRepository.class

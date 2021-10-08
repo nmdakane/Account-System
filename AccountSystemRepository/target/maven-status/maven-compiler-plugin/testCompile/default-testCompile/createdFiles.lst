@@ -1,0 +1,6 @@
+com\lelo\repo\files\RewardsRepositoryTest.class
+com\lelo\repo\files\PersonRepositoryTest.class
+com\lelo\repo\files\TransactionsRepositoryTest.class
+com\lelo\test\config\TestRepository.class
+com\lelo\repo\files\AccountTypeRepositoryTest.class
+com\lelo\repo\files\GoalsRepositoryTest.class
