@@ -3,7 +3,10 @@ package com.lelo.services.controllers;
 import com.lelo.businessLogic.Flows.CreateTransactionFlow;
 import com.lelo.businessLogic.Flows.FetchTransactionsFlow;
 import com.lelo.businessLogic.Flows.FetchTransactionsForPersonFlow;
+<<<<<<< HEAD
 import com.lelo.businessLogic.Flows.UpdatePersonFlow;
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 import com.lelo.webdomain.dtos.TransactionsDTO;
 import com.lelo.webdomain.persistence.Person;
 import io.swagger.annotations.ApiOperation;
@@ -22,6 +25,7 @@ public class TransactionsController {
     private final FetchTransactionsFlow fetchTransactionsFlow;
     private final FetchTransactionsForPersonFlow fetchTransactionsForPersonFlow;
     private final CreateTransactionFlow createTransactionFlow;
+<<<<<<< HEAD
     private final UpdatePersonFlow updatePersonFlow;
 
     @Autowired
@@ -35,6 +39,16 @@ public class TransactionsController {
 
 
 
+=======
+
+    @Autowired
+    public TransactionsController(FetchTransactionsFlow fetchTransactionsFlow, FetchTransactionsForPersonFlow fetchTransactionsForPersonFlow, CreateTransactionFlow createTransactionFlow) {
+        this.fetchTransactionsFlow = fetchTransactionsFlow;
+        this.fetchTransactionsForPersonFlow = fetchTransactionsForPersonFlow;
+        this.createTransactionFlow = createTransactionFlow;
+    }
+
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @GetMapping("/all")
     @ApiOperation(value="Gets all the transactions" ,notes="Returns a list of transactions so far")
     @ApiResponses(value={
@@ -56,6 +70,7 @@ public class TransactionsController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public ResponseEntity<TransactionsDTO> create(@RequestBody TransactionsDTO transactionsDTO){
         TransactionsDTO transactionsDTOS = createTransactionFlow.createTransaction(transactionsDTO);
         updatePersonFlow.updateAmount(transactionsDTO.getPersonEmail(), transactionsDTOS);
@@ -63,6 +78,14 @@ public class TransactionsController {
     }
 
     @GetMapping("/member/")
+=======
+    public ResponseEntity<TransactionsDTO> create(TransactionsDTO transactionsDTO){
+        TransactionsDTO transactionsDTOS = createTransactionFlow.createTransaction(transactionsDTO);
+        return new ResponseEntity<>(transactionsDTOS, HttpStatus.OK);
+    }
+
+    @GetMapping("/member/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets all the transactions" ,notes="Returns a list of transactions so far")
     @ApiResponses(value={
             @ApiResponse(code=200,message="Transactions returned"),
@@ -70,8 +93,13 @@ public class TransactionsController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public ResponseEntity<List<TransactionsDTO>> getMemberTransaction(@RequestParam String email){
         List<TransactionsDTO> transactionsDTOS = fetchTransactionsForPersonFlow.getTransactionsOfPerson(email);
+=======
+    public ResponseEntity<List<TransactionsDTO>> getMemberTransaction(@RequestParam Person id){
+        List<TransactionsDTO> transactionsDTOS = fetchTransactionsForPersonFlow.getTransactionsOfPerson(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         return new ResponseEntity<>(transactionsDTOS, HttpStatus.OK);
     }
 

@@ -1,5 +1,6 @@
 package com.lelo.translator.Implementation;
 
+<<<<<<< HEAD
 import com.lelo.repo.files.GoalsRepository;
 import com.lelo.repo.files.PersonRepository;
 import com.lelo.repo.files.TransactionsRepository;
@@ -9,6 +10,12 @@ import com.lelo.webdomain.dtos.TransactionsDTO;
 import com.lelo.webdomain.persistence.Goals;
 import com.lelo.webdomain.persistence.Person;
 import com.lelo.webdomain.persistence.PersonTransactions;
+=======
+import com.lelo.repo.files.PersonRepository;
+import com.lelo.translator.PersonTranslator;
+import com.lelo.webdomain.dtos.PersonDTO;
+import com.lelo.webdomain.persistence.Person;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +25,7 @@ import java.util.List;
 @Component
 public class PersonTransImpl implements PersonTranslator {
     private final PersonRepository repository;
+<<<<<<< HEAD
     private final GoalsRepository goalsRepository;
     private  final TransactionsRepository transactionsRepository;
 
@@ -30,12 +38,23 @@ public class PersonTransImpl implements PersonTranslator {
     }
 
 
+=======
+
+    @Autowired
+    public PersonTransImpl(PersonRepository rep) {
+        this.repository = rep;
+    }
+
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @Override
     public List<com.lelo.webdomain.dtos.PersonDTO> getPeople() {
         List<com.lelo.webdomain.dtos.PersonDTO> personDTODTOS = new ArrayList<>();
         try {
             for(Person person : repository.findAll()){
+<<<<<<< HEAD
                 updateGamePlays(person.getEmail());
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
                 personDTODTOS.add(new com.lelo.webdomain.dtos.PersonDTO(person));
             }
         }catch(Exception e){
@@ -45,6 +64,7 @@ public class PersonTransImpl implements PersonTranslator {
     }
 
     @Override
+<<<<<<< HEAD
     public com.lelo.webdomain.dtos.PersonDTO getPersonInfo(String email) {
         Person person;
         updateGamePlays(email);
@@ -52,11 +72,20 @@ public class PersonTransImpl implements PersonTranslator {
             person = repository.getPerson(email);
         }catch(Exception e){
             throw new RuntimeException("Cannot get a member with email "+ email +" members from the db",e);
+=======
+    public com.lelo.webdomain.dtos.PersonDTO getPerson(Long id) {
+        Person person;
+        try {
+            person = repository.getOne(id);
+        }catch(Exception e){
+            throw new RuntimeException("Cannot get a member with id "+ id +" members from the db",e);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         }
         return new com.lelo.webdomain.dtos.PersonDTO(person);
     }
 
     @Override
+<<<<<<< HEAD
     public com.lelo.webdomain.dtos.PersonDTO updatePersonPhone(String email, String phone) {
         Person person;
         try {
@@ -64,6 +93,14 @@ public class PersonTransImpl implements PersonTranslator {
             person = repository.getPerson(email);
         }catch(Exception e){
             throw new RuntimeException("Cannot get a member with id "+ email +" members from the db",e);
+=======
+    public com.lelo.webdomain.dtos.PersonDTO updatePerson(Long id) {
+        Person person = repository.getOne(id);
+        try {
+            repository.save(person);
+        }catch(Exception e){
+            throw new RuntimeException("Cannot get a member with id "+ id +" members from the db",e);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         }
         return new com.lelo.webdomain.dtos.PersonDTO(person);
     }
@@ -77,7 +114,13 @@ public class PersonTransImpl implements PersonTranslator {
             member.setSurname(person.getSurname());
             member.setEmail(person.getEmail());
             member.setPhoneNumber(person.getPhoneNumber());
+<<<<<<< HEAD
             member.setPlays(person.getGame_plays());
+=======
+            member.setPlays(person.getPlays());
+            member.setGoals(null);
+            member.setTransactions(null);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
             repository.save(member);
         }catch(Exception e){
             throw new RuntimeException("Cannot add a members into the db",e);
@@ -86,15 +129,22 @@ public class PersonTransImpl implements PersonTranslator {
     }
 
     @Override
+<<<<<<< HEAD
     public void deletePerson(String email) {
         Person person = repository.getPerson(email);
         try {
             repository.delete(person);
 
+=======
+    public void deletePerson(Long id) {
+        try {
+            repository.deleteById(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         }catch(Exception e){
             throw new RuntimeException("Cannot delete members from the db",e);
         }
     }
+<<<<<<< HEAD
 
     @Override
     public void updateAmount(String email, TransactionsDTO transactionsDTO) {
@@ -137,5 +187,7 @@ public class PersonTransImpl implements PersonTranslator {
             throw new RuntimeException("Cannot update game plays to the db",e);
         }
     }
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }
 

@@ -2,6 +2,7 @@ package com.lelo.repo.files;
 
 import com.lelo.webdomain.persistence.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -36,4 +37,10 @@ public interface PersonRepository extends JpaRepository<Person,Long> {
     @Transactional
     @Query(value = "update person set current_amount=:amount where person_email=:email",nativeQuery = true)
     public void updateAmountByEmail(@Param("email") String email, @Param("amount") double amount);
+=======
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PersonRepository extends JpaRepository<Person,Long> {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }

@@ -15,7 +15,12 @@ public class DeleteGoalsFlowImpl implements DeleteGoalsFlow {
     }
 
     @Override
+<<<<<<< HEAD
     public void deleteGoals(String email) {
         goalsTranslator.deleteGoals(email);
+=======
+    public void deleteGoals(Long id) {
+        goalsTranslator.deleteGoals(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 }

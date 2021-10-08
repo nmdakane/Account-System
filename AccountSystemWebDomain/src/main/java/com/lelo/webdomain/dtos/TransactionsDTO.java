@@ -1,27 +1,46 @@
 package com.lelo.webdomain.dtos;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lelo.webdomain.persistence.AccountType;
 import com.lelo.webdomain.persistence.Person;
 import com.lelo.webdomain.persistence.PersonTransactions;
+=======
+import com.lelo.webdomain.persistence.Person;
+import com.lelo.webdomain.persistence.Transactions;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
 public class TransactionsDTO {
     private String name;
     private int amount;
+<<<<<<< HEAD
     private String type;
     private String accountTypeNmonic;
     private String personEmail;
 
 
+=======
+    //private AccountTypeDTO accountTypeDTO;
+   // private PersonDTO personDTO;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     public TransactionsDTO() {
     }
 
+<<<<<<< HEAD
+=======
+    public TransactionsDTO(Transactions transactions) {
+        this.name = transactions.getName();
+        this.amount = transactions.getAmount();
+    }
+
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     public TransactionsDTO(String name, int amount) {
         this.name = name;
         this.amount = amount;
     }
 
+<<<<<<< HEAD
     public TransactionsDTO(String name, int amount, String accountTypeNmonic, String person, String type) {
         this.name = name;
         this.amount = amount;
@@ -41,6 +60,13 @@ public class TransactionsDTO {
     @JsonIgnore
     public PersonTransactions buildTransaction(AccountType accountType, Person person){
         return new PersonTransactions(null,this.getName(),this.getType(), accountType, person,this.getAmount());
+=======
+    public TransactionsDTO(String name, int amount, AccountTypeDTO accountTypeDTO, Person person) {
+        this.name = name;
+        this.amount = amount;
+        //this.accountTypeDTO = accountTypeDTO;
+        //this.personDTO = personDTO;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     public String getName() {
@@ -59,6 +85,7 @@ public class TransactionsDTO {
         this.amount = amount;
     }
 
+<<<<<<< HEAD
     public String getAccountTypeNmonic() {
         return accountTypeNmonic;
     }
@@ -74,6 +101,23 @@ public class TransactionsDTO {
     public void setPersonEmail(String personEmail) {
         this.personEmail = personEmail;
     }
+=======
+    /*public AccountTypeDTO getAccountType() {
+        return accountTypeDTO;
+    }
+
+    public void setAccountType(AccountTypeDTO accountTypeDTO) {
+        this.accountTypeDTO = accountTypeDTO;
+    }
+
+    public PersonDTO getPerson() {
+        return personDTO;
+    }
+
+    public void setPerson(PersonDTO personDTO) {
+        this.personDTO = personDTO;
+    }*/
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     /*public Transactions getTransactions() {
         return transactions;
@@ -83,6 +127,7 @@ public class TransactionsDTO {
         this.transactions = transactions;
     }*/
 
+<<<<<<< HEAD
     public String getType() {
         return type;
     }
@@ -91,6 +136,8 @@ public class TransactionsDTO {
         this.type = type;
     }
 
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @Override
     public String toString() {
         return "TransactionsDTO{" +

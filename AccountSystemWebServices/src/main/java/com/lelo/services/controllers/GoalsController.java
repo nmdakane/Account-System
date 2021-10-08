@@ -37,6 +37,7 @@ public class GoalsController {
             @ApiResponse(code=500,message="Internal Server error")
     })
     public ResponseEntity<List<GoalsDTO>> getAll(){
+<<<<<<< HEAD
         List<GoalsDTO> goalsDTOS = fetchGoalsFlow.getGoalsPerson();
         return new ResponseEntity<>(goalsDTOS, HttpStatus.OK);
     }
@@ -58,10 +59,21 @@ public class GoalsController {
     @ApiOperation(value="Update person's driving goals" ,notes="Updates a member's goals")
     @ApiResponses(value={
             @ApiResponse(code=200,message="Driving goal returned"),
+=======
+        List<GoalsDTO> goalsDTOS = fetchGoalsFlow.getGoals();
+        return new ResponseEntity<>(goalsDTOS, HttpStatus.OK);
+    }
+
+    @PostMapping("/update/{id}")
+    @ApiOperation(value="Update person's goals" ,notes="Updates a member's goals")
+    @ApiResponses(value={
+            @ApiResponse(code=200,message="Members returned"),
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
             @ApiResponse(code=400,message="Bad request"),
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void updateMemberDrivingGoals(@RequestParam String email, @RequestParam double driving){
         updatePersonGoals.goalsUpdateDriving(email,driving);
     }
@@ -70,10 +82,21 @@ public class GoalsController {
     @ApiOperation(value="Update person's Spending goals" ,notes="Updates a member's Spanding goals")
     @ApiResponses(value={
             @ApiResponse(code=200,message="Spending goal returned"),
+=======
+    public void updateMemberGoals(@RequestParam Long id, @RequestBody GoalsDTO goalsDTO){
+        updatePersonGoals.goalsUpdate(id);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @ApiOperation(value="Update person's goals" ,notes="Updates a member's goals")
+    @ApiResponses(value={
+            @ApiResponse(code=200,message="Members returned"),
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
             @ApiResponse(code=400,message="Bad request"),
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void updateMemberspendingGoals(@RequestParam String email, @RequestParam double spending){
         updatePersonGoals.goalsUpdateSpending(email,spending);
     }
@@ -92,6 +115,12 @@ public class GoalsController {
 
 
 
+=======
+    public void deleteMemberGoals(@RequestParam Long id){
+        deleteGoalsFlow.deleteGoals(id);
+    }
+
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
 
 

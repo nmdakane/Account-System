@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\AccountType.java
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\PersonDTO.java
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Person.java
@@ -8,3 +9,15 @@ C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lel
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Goals.java
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\GoalsDTO.java
 C:\Users\Ian\Desktop\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\RewardsDTO.java
+=======
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\AccountTypeDTO.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\AccountType.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Goals.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\TransactionsDTO.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\GoalsDTO.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\PersonDTO.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Person.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Rewards.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\persistence\Transactions.java
+C:\Users\Mpumi Mdekan\IdeaProjects\Account System\AccountSystemWebDomain\src\main\java\com\lelo\webdomain\dtos\RewardsDTO.java
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2

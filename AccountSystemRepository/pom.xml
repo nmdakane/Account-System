@@ -35,12 +35,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+<<<<<<< HEAD
 
         <dependency>
             <groupId>com.h2database</groupId>
@@ -53,6 +58,10 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.0.12.Final</version>
         </dependency>
+=======
+=======
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     </dependencies>
     
 </project>

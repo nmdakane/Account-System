@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 com\lelo\services\controllers\GoalsController.class
 com\lelo\services\config\webconfig.class
 com\lelo\services\controllers\PersonController.class
@@ -6,3 +10,11 @@ com\lelo\services\controllers\TransactionsController.class
 com\lelo\services\config\ConfigurationSwagger.class
 com\lelo\services\controllers\RewardsController.class
 com\lelo\services\controllers\AccountTypeController.class
+<<<<<<< HEAD
+=======
+=======
+com\lelo\services\config\webconfig.class
+com\lelo\services\MainRestApplication.class
+com\lelo\services\config\ConfigurationSwagger.class
+>>>>>>> b199b69d691679bba8a1301f838ff6153a986d3c
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2

@@ -13,7 +13,12 @@ public class AccountType implements Serializable {
     private String nmonic;
     private LocalDate createdDate;
     private String name;
+<<<<<<< HEAD
     private Set<PersonTransactions> transactions;
+=======
+    private Set<Transactions> transactions;
+    private Set<Rewards> rewards;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     public AccountType() {
     }
@@ -25,7 +30,11 @@ public class AccountType implements Serializable {
         this.name = name;
     }
 
+<<<<<<< HEAD
     public AccountType(Long id, String nmonic, LocalDate createdDate, String name, Set<PersonTransactions> transactions) {
+=======
+    public AccountType(Long id, String nmonic, LocalDate createdDate, String name, Set<Transactions> transactions) {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         this.id = id;
         this.nmonic = nmonic;
         this.createdDate = createdDate;
@@ -33,10 +42,25 @@ public class AccountType implements Serializable {
         this.transactions = transactions;
     }
 
+<<<<<<< HEAD
 
     @Id
     @SequenceGenerator(name="Account_System_GENERIC_SEQ",sequenceName = "ACCOUNTSYSAS_GENERIC_SEQ",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Account_System_GENERIC_SEQ")
+=======
+    public AccountType(Long id, String nmonic, LocalDate createdDate, String name, Set<Transactions> transactions, Set<Rewards> rewards) {
+        this.id = id;
+        this.nmonic = nmonic;
+        this.createdDate = createdDate;
+        this.name = name;
+        this.transactions = transactions;
+        this.rewards = rewards;
+    }
+
+    @Id
+    @SequenceGenerator(name="Disc_GENERIC_SEQ",sequenceName = "ACCOUNTSYS_GENERIC_SEQ",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Disc_GENERIC_SEQ")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @Column(name="Account_type_ID")
     public Long getId() {
         return id;
@@ -73,6 +97,7 @@ public class AccountType implements Serializable {
         this.name = name;
     }
 
+<<<<<<< HEAD
     @OneToMany(targetEntity = PersonTransactions.class, fetch = FetchType.LAZY, mappedBy = "accountType")
     public Set<PersonTransactions> getTransactions() {
         return transactions;
@@ -82,6 +107,25 @@ public class AccountType implements Serializable {
         this.transactions = transactions;
     }
 
+=======
+    @OneToMany(targetEntity = Transactions.class, fetch = FetchType.LAZY, mappedBy = "accountType" ,orphanRemoval = true)
+    public Set<Transactions> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(Set<Transactions> transactions) {
+        this.transactions = transactions;
+    }
+
+    @OneToMany(targetEntity = Rewards.class,fetch = FetchType.LAZY,mappedBy = "accountType",orphanRemoval = true)
+    public Set<Rewards> getRewards() {
+        return rewards;
+    }
+
+    public void setRewards(Set<Rewards> rewards) {
+        this.rewards = rewards;
+    }
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     @Override
     public boolean equals(Object o) {

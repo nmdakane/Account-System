@@ -43,7 +43,11 @@ public class AccountTypeController {
         return new ResponseEntity<>(accountTypeDTOS, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @GetMapping("/accounttype/{NMonic}")
+=======
+    @GetMapping("/memberaccounttype/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets all the account types added" ,notes="Returns a list of account types")
     @ApiResponses(value={
             @ApiResponse(code=200,message="account types returned"),
@@ -51,12 +55,21 @@ public class AccountTypeController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public ResponseEntity<AccountTypeDTO> getMemberAccountType(@RequestParam String Nmonic){
         AccountTypeDTO accountTypememberDTO = fetchUserAccountTypeFlow.getAccountType(Nmonic);
         return new ResponseEntity<>(accountTypememberDTO, HttpStatus.OK);
     }
 
     /*@PostMapping("/update/{id}")
+=======
+    public ResponseEntity<AccountTypeDTO> getMemberAccountType(Long id){
+        AccountTypeDTO accountTypememberDTO = fetchUserAccountTypeFlow.getAccountType(id);
+        return new ResponseEntity<>(accountTypememberDTO, HttpStatus.OK);
+    }
+
+    @PostMapping("/update/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets all the account types added" ,notes="Returns a list of account types")
     @ApiResponses(value={
             @ApiResponse(code=200,message="account types returned"),
@@ -67,9 +80,15 @@ public class AccountTypeController {
     public ResponseEntity<AccountTypeDTO> update(Long id){
         AccountTypeDTO accountTypeupdateDTO = updateAccountTypeFlow.updateAccountType(id);
         return new ResponseEntity<>(accountTypeupdateDTO, HttpStatus.OK);
+<<<<<<< HEAD
     }*/
 
     @DeleteMapping("/delete/{nmonic}")
+=======
+    }
+
+    @DeleteMapping("/delete/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets all the account types added" ,notes="Returns a list of account types")
     @ApiResponses(value={
             @ApiResponse(code=200,message="account types returned"),
@@ -77,8 +96,13 @@ public class AccountTypeController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void delete(@RequestParam String Nmonic){
         deleteAccountTypeFlow.deleteAccountType(Nmonic);
+=======
+    public void delete(Long id){
+        deleteAccountTypeFlow.deleteAccountType(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
 

@@ -1,22 +1,34 @@
 package com.lelo.webdomain.dtos;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 import com.lelo.webdomain.persistence.Rewards;
 
 public class RewardsDTO {
     private String category;
     private String name;
     private String amount;
+<<<<<<< HEAD
+=======
+    private Rewards rewards;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     public RewardsDTO() {
     }
 
     public RewardsDTO(Rewards rewards) {
+<<<<<<< HEAD
+=======
+        super();
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         this.amount = rewards.getAmount();
         this.name = rewards.getName();
         this.category = rewards.getCategory();
     }
 
+<<<<<<< HEAD
     public RewardsDTO(String category, String name, String amount) {
         this.category = category;
         this.name = name;
@@ -26,6 +38,19 @@ public class RewardsDTO {
     @JsonIgnore
     public Rewards buildReward(RewardsDTO rewardsDTO){
         return  new Rewards(null,this.getCategory(),this.getName(), this.getAmount());
+=======
+    public RewardsDTO(String category, String name, String amount, Rewards rewards) {
+        this.category = category;
+        this.name = name;
+        this.amount = amount;
+        this.rewards = rewards;
+    }
+
+    public RewardsDTO(String category, String name, String amount) {
+        this.category = category;
+        this.name = name;
+        this.amount = amount;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     public String getCategory() {

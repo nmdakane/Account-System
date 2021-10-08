@@ -16,7 +16,13 @@ public class UpdateRewardFlowImpl implements UpdateRewardFlow {
     }
 
     @Override
+<<<<<<< HEAD
     public void updateReward(Long id,double price) {
         rewardsTranslator.updateReward(id,price);
+=======
+    public RewardsDTO updateReward(Long id) {
+        RewardsDTO rewardsDTO = rewardsTranslator.updateReward(id);
+        return null;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 }

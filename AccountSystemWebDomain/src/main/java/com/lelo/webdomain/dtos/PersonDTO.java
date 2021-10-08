@@ -1,23 +1,32 @@
 package com.lelo.webdomain.dtos;
 
 import java.io.Serializable;
+<<<<<<< HEAD
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lelo.webdomain.persistence.Person;
 import java.util.*;
+=======
+import com.lelo.webdomain.persistence.Person;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
 public class PersonDTO implements Serializable {
     private String name;
     private String surname;
     private String phoneNumber;
     private String email;
+<<<<<<< HEAD
     private int game_plays;
     private double currentAmount;
     private GoalsDTO goalsDTO;
+=======
+    private int plays;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 
     public PersonDTO() {
     }
 
+<<<<<<< HEAD
     public PersonDTO(Person person) {
         this.name = person.getName();
         this.surname = person.getSurname();
@@ -31,10 +40,22 @@ public class PersonDTO implements Serializable {
     }
 
     public PersonDTO(String name, String surname, String phoneNumber, String email, int plays,double amount, GoalsDTO goalsDTO) {
+=======
+    public PersonDTO(Person personDTO) {
+        this.name = personDTO.getName();
+        this.surname = personDTO.getSurname();
+        this.email = personDTO.getEmail();
+        this.phoneNumber= personDTO.getPhoneNumber();
+        this.plays = personDTO.getPlays();
+    }
+
+    public PersonDTO(String name, String surname, String phoneNumber, String email,int plays) {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
         this.email = email;
+<<<<<<< HEAD
         this.game_plays = plays;
         this.currentAmount = amount;
         this.goalsDTO = goalsDTO;
@@ -48,6 +69,9 @@ public class PersonDTO implements Serializable {
                 personDTO.getEmail(),
                 personDTO.getGame_plays(),
                 personDTO.getCurrentAmount());
+=======
+        this.plays = plays;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     public String getName() {
@@ -90,6 +114,7 @@ public class PersonDTO implements Serializable {
         this.person = person;
     }*/
 
+<<<<<<< HEAD
     public double getCurrentAmount() {
         return currentAmount;
     }
@@ -112,6 +137,14 @@ public class PersonDTO implements Serializable {
 
     public void setGoalsDTO(GoalsDTO goalsDTO) {
         this.goalsDTO = goalsDTO;
+=======
+    public int getPlays() {
+        return plays;
+    }
+
+    public void setPlays(int plays) {
+        this.plays = plays;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     @Override
@@ -121,8 +154,11 @@ public class PersonDTO implements Serializable {
                 ", surname='" + surname + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
+<<<<<<< HEAD
                 ", game_plays='" + game_plays + '\'' +
                 ", current amount='" + currentAmount + '\'' +
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
                 '}';
     }
 

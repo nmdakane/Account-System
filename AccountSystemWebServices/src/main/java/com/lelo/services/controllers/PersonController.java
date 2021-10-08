@@ -44,7 +44,11 @@ public class PersonController {
         return new ResponseEntity<>(personDTODTOS, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @GetMapping("/member/")
+=======
+    @GetMapping("/member/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets a Member" ,notes="Returns one member with the specified id")
     @ApiResponses(value={
             @ApiResponse(code=200,message="Member returned"),
@@ -52,12 +56,21 @@ public class PersonController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public ResponseEntity<com.lelo.webdomain.dtos.PersonDTO> getMember(@RequestParam String email){
         com.lelo.webdomain.dtos.PersonDTO member = fetchPersonFlow.getPerson(email);
         return new ResponseEntity<>(member, HttpStatus.OK);
     }
 
     @DeleteMapping("/member/")
+=======
+    public ResponseEntity<com.lelo.webdomain.dtos.PersonDTO> getMember(@RequestParam Long id){
+        com.lelo.webdomain.dtos.PersonDTO member = fetchPersonFlow.getPerson(id);
+        return new ResponseEntity<>(member, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/member/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Delete a Member" ,notes="Deletes one member with the specified id")
     @ApiResponses(value={
             @ApiResponse(code=200,message="Member deleted"),
@@ -65,8 +78,13 @@ public class PersonController {
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void deleteMember(@RequestParam String email){
         deletePersonFlow.deletePerson(email);
+=======
+    public void deleteMember(@RequestParam Long id){
+        deletePersonFlow.deletePerson(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     @PutMapping("/member/")
@@ -81,15 +99,25 @@ public class PersonController {
         createPersonFlow.addPerson(person);
     }
 
+<<<<<<< HEAD
     @PostMapping("/member/")
     @ApiOperation(value="update a Member's phone" ,notes="updates one member with the specified id")
+=======
+    @PostMapping("/member/{id}")
+    @ApiOperation(value="update a new Member" ,notes="updates one member with the specified id")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiResponses(value={
             @ApiResponse(code=200,message="Member added"),
             @ApiResponse(code=400,message="Bad request"),
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void updateMember(@RequestParam String email ,@RequestParam String phonenumber){
         updatePersonFlow.updatePerson(email,phonenumber);
+=======
+    public void updateMember(@RequestParam Long id ,@RequestBody com.lelo.webdomain.dtos.PersonDTO personDTO){
+        updatePersonFlow.updatePerson(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 }

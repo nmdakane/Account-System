@@ -1,5 +1,6 @@
 package com.lelo.repo.files;
 
+<<<<<<< HEAD
 import com.lelo.webdomain.persistence.Person;
 import com.lelo.webdomain.persistence.PersonTransactions;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -28,4 +29,12 @@ public interface TransactionsRepository extends JpaRepository<PersonTransactions
     @Query(value = " insert into person_transactions values" +
                 "( ':id', 15, 'account created', 'accreated',':default', ':email')",nativeQuery = true)
     void createFirstTransaction(@Param("default") String accountType,@Param("email") String email,@Param("id") Long id);*/
+=======
+import com.lelo.webdomain.persistence.Transactions;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TransactionsRepository extends JpaRepository<Transactions, Long> {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }

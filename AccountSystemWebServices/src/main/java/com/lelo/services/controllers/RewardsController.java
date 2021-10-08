@@ -43,7 +43,11 @@ public class RewardsController {
         return new ResponseEntity<>(rewardsDTOS, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @GetMapping("/reward/")
+=======
+    @GetMapping("/reward/{id}")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiOperation(value="Gets a reward" ,notes="Returns a reward with a specified id")
     @ApiResponses(value={
             @ApiResponse(code=200,message="reward returned"),
@@ -56,20 +60,35 @@ public class RewardsController {
         return new ResponseEntity<>(rewardsDTOS, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @PostMapping("/reward/update/")
     @ApiOperation(value="Updates a reward" ,notes="Returns a reward with a that has been updated")
+=======
+    @PostMapping("/reward/{id}")
+    @ApiOperation(value="Gets a reward" ,notes="Returns a reward with a specified id")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiResponses(value={
             @ApiResponse(code=200,message="reward returned"),
             @ApiResponse(code=400,message="Bad request"),
             @ApiResponse(code=404,message="Not found"),
             @ApiResponse(code=500,message="Internal Server error")
     })
+<<<<<<< HEAD
     public void updateReward(@RequestParam Long id, @RequestParam double price){
         updateRewardFlow.updateReward(id,price);
     }
 
     @PutMapping("/create")
     @ApiOperation(value="creates a reward" ,notes="Returns a reward that has been created")
+=======
+    public ResponseEntity<RewardsDTO> updateReward(@RequestParam Long id, @RequestBody RewardsDTO rewardsDTO){
+        RewardsDTO rewardsDTOS =updateRewardFlow.updateReward(id);
+        return new ResponseEntity<>(rewardsDTOS, HttpStatus.OK);
+    }
+
+    @PutMapping("/reward/{id}")
+    @ApiOperation(value="Gets a reward" ,notes="Returns a reward with a specified id")
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     @ApiResponses(value={
             @ApiResponse(code=200,message="reward returned"),
             @ApiResponse(code=400,message="Bad request"),
@@ -80,6 +99,7 @@ public class RewardsController {
         RewardsDTO reward = createRewardFlow.createReward(rewardsDTO);
         return new ResponseEntity<>(reward, HttpStatus.OK);
     }
+<<<<<<< HEAD
 
     @DeleteMapping("/delete/")
     @ApiOperation(value="Gets a reward" ,notes="Returns a reward with a specified id")
@@ -92,4 +112,6 @@ public class RewardsController {
     public void deleteReward(@RequestParam Long id){
         deleteRewardFlow.deleteReward(id);
     }
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }

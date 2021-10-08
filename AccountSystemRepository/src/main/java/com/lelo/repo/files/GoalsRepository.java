@@ -2,6 +2,7 @@ package com.lelo.repo.files;
 
 import com.lelo.webdomain.persistence.Goals;
 import org.springframework.data.jpa.repository.JpaRepository;
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -41,4 +42,10 @@ public interface GoalsRepository extends JpaRepository<Goals,Long> {
             "goals.person_email=person.person_id where person.Person_Email=:email",nativeQuery = true)
     public Goals getGoalsByMemberEmail(@Param("email") String email);
 
+=======
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface GoalsRepository extends JpaRepository<Goals,Long> {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }

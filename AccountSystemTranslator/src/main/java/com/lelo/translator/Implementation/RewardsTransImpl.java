@@ -44,12 +44,23 @@ public class RewardsTransImpl implements RewardsTranslator {
     }
 
     @Override
+<<<<<<< HEAD
     public void updateReward(Long id, double price) {
         try {
             rewardsRepository.updateRewardsPriceById(id,price);
         }catch (Exception e){
             throw new RuntimeException("Cannot update goals into the db",e);
         }
+=======
+    public RewardsDTO updateReward(Long id) {
+        Rewards rewards = rewardsRepository.getOne(id);
+        try {
+            rewardsRepository.save(rewards);
+        }catch (Exception e){
+            throw new RuntimeException("Cannot update goals into the db",e);
+        }
+        return new RewardsDTO(rewards);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 
     @Override
@@ -63,6 +74,7 @@ public class RewardsTransImpl implements RewardsTranslator {
 
     @Override
     public RewardsDTO createReward(RewardsDTO rewards) {
+<<<<<<< HEAD
         Rewards rewards1 = new Rewards();
         try {
              rewards1.setId(null);
@@ -74,5 +86,8 @@ public class RewardsTransImpl implements RewardsTranslator {
             throw new RuntimeException("Cannot add rewards to the db the db",e);
         }
         return rewards;
+=======
+        return null;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     }
 }

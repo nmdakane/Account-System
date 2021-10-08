@@ -20,10 +20,13 @@
             <artifactId>javax.persistence-api</artifactId>
             <scope>provided</scope>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
         </dependency>
+=======
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
     </dependencies>
 
     

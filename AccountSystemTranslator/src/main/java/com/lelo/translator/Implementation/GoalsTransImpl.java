@@ -1,6 +1,7 @@
 package com.lelo.translator.Implementation;
 
 import com.lelo.repo.files.GoalsRepository;
+<<<<<<< HEAD
 import com.lelo.repo.files.PersonRepository;
 import com.lelo.translator.GoalsTranslator;
 import com.lelo.webdomain.dtos.GoalsDTO;
@@ -9,6 +10,11 @@ import com.lelo.webdomain.persistence.Goals;
 import com.lelo.webdomain.persistence.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+=======
+import com.lelo.translator.GoalsTranslator;
+import com.lelo.webdomain.dtos.GoalsDTO;
+import com.lelo.webdomain.persistence.Goals;
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +24,7 @@ import java.util.List;
 @Component
 public class GoalsTransImpl implements GoalsTranslator {
     private final GoalsRepository goalsRepository;
+<<<<<<< HEAD
     private final PersonRepository personRepository;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GoalsTransImpl.class);
@@ -31,6 +38,16 @@ public class GoalsTransImpl implements GoalsTranslator {
 
     @Override
     public List<GoalsDTO> getGoalsPerson() {
+=======
+
+    @Autowired
+    public GoalsTransImpl(GoalsRepository goalsRepository) {
+        this.goalsRepository = goalsRepository;
+    }
+
+    @Override
+    public List<GoalsDTO> getGoals() {
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         List<GoalsDTO> goalsDTOS = new ArrayList<>();
         try {
             for(Goals goals:goalsRepository.findAll()){
@@ -43,10 +60,17 @@ public class GoalsTransImpl implements GoalsTranslator {
     }
 
     @Override
+<<<<<<< HEAD
     public GoalsDTO getPersonGoals(String email) {
         Goals goals;
         try {
             goals = goalsRepository.getGoalsByMemberEmail(email);
+=======
+    public GoalsDTO getPersonGoals(Long id) {
+        Goals goals;
+        try {
+            goals = goalsRepository.getOne(id);
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
         }catch (Exception e){
             throw new RuntimeException("Cannot get all goals from the db",e);
         }
@@ -54,6 +78,7 @@ public class GoalsTransImpl implements GoalsTranslator {
     }
 
     @Override
+<<<<<<< HEAD
     public void goalsUpdateDriving(String email, double goal) {
         try {
             goalsRepository.updateGoalsDrivingByMemberId(email,goal);
@@ -108,4 +133,24 @@ public class GoalsTransImpl implements GoalsTranslator {
     }
 
 
+=======
+    public GoalsDTO goalsUpdate(Long id) {
+        Goals goals = goalsRepository.getOne(id);
+        try {
+            goalsRepository.save(goals);
+        }catch (Exception e){
+            throw new RuntimeException("Cannot get all goals from the db",e);
+        }
+        return new GoalsDTO(goals);
+    }
+
+    @Override
+    public void deleteGoals(Long id) {
+        try {
+            goalsRepository.deleteById(id);
+        }catch (Exception e){
+            throw new RuntimeException("Cannot delete person's goals from the db",e);
+        }
+    }
+>>>>>>> e742888ae3999fa90cca9d489362b4caa12665e2
 }
